@@ -89,7 +89,7 @@ pipeline {
                         //${USERNAME}:${PASSWORD}@
                         sh 'git add .'
                         sh 'git commit -m "version change"'
-                        sh 'git push -u origin master'
+                        sh 'git push -u origin HEAD:master'
                         //sh 'git push origin HEAD:jenkins-jobs'
                     }
                 }
