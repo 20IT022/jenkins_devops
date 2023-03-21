@@ -79,13 +79,13 @@ pipeline {
                 script{
                     withCredentials([usernamePassword(credentialsId: 'git-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                         sh 'git config --global user.email "20it022@charusat.edu.in"'
-                        sh 'git config --global user.name "20it022"'
+                        sh 'git config --global user.name "20IT022"'
 
                         sh 'git status'
                         sh 'git branch'
                         sh 'git config --list'
 
-                        sh "git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/20IT022/jenkins_devops.git"
+                        sh "git remote set-url origin https://${PASSWORD}@github.com/20IT022/jenkins_devops.git"
                         //
                         sh 'git add .'
                         sh 'git commit -m "version change"'
