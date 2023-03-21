@@ -85,12 +85,12 @@ pipeline {
                         sh 'git branch'
                         sh 'git config --list'
 
-                        sh "git remote add origin https://github.com/20IT022/jenkins_devops.git"
+                        sh "git remote set-url origin https://github.com/20IT022/jenkins_devops.git"
                         //${USERNAME}:${PASSWORD}@
                         sh 'git add .'
                         sh 'git commit -m "version change"'
-                        // sh 'git push -u origin master'
-                        sh 'git push origin HEAD:jenkins-jobs'
+                        sh 'git push -u origin master'
+                        //sh 'git push origin HEAD:jenkins-jobs'
                     }
                 }
             }
