@@ -89,8 +89,8 @@ pipeline {
                         //
                         sh 'git add .'
                         sh 'git commit -m "version change"'
-                        sh 'git push -u origin HEAD:master'
-                        //sh 'git push origin HEAD:jenkins-jobs'
+                        // sh 'git push -u origin HEAD:master'
+                        sh 'git push origin HEAD:jenkins-jobs'
                     }
                 }
             }
